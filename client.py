@@ -1,5 +1,6 @@
 import socket
 from time import sleep
+from turtle import st
 
 # tao socket
 try:
@@ -22,5 +23,7 @@ while(True):
 
     # recieve
     print("%s from client" % s.recv(1024).decode("utf8"))
-    break
+    str = input('Tiep tuc gui ko? ')
+    if (str == 'n'):
+        break
 s.close()

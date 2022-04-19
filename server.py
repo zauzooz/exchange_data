@@ -17,9 +17,10 @@ s.listen(5)
 while (True):
     conn, addr = s.accept()
 
-    # recieve
-    print("%s from client" % (conn.recv(1024).decode("utf8")))
+    while (True):
+        # recieve
+        print("%s from client" % (conn.recv(1024).decode("utf8")))
 
-    # send
-    data = '2'
-    conn.sendall(bytes(data, "utf8"))
+        # send
+        data = '2'
+        conn.sendall(bytes(data, "utf8"))
